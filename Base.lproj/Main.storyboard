@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CIx-fO-2iX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon View Controller-->
+        <scene sceneID="RS5-Jy-bdn">
+            <objects>
+                <viewController id="CIx-fO-2iX" customClass="PokemonViewController" customModule="PokemonAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bOg-wh-fXL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="38a-Sw-KiG">
+                                <rect key="frame" x="8" y="51.5" width="359" height="564.5"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="Search a Pokemon by name or id..." translatesAutoresizingMaskIntoConstraints="NO" id="Tbo-Ty-WiB">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="CIx-fO-2iX" id="qMc-gw-LrW"/>
+                                        </connections>
+                                    </searchBar>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4X-Tq-CaP">
+                                        <rect key="frame" x="0.0" y="88" width="359" height="359"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="h4X-Tq-CaP" secondAttribute="height" multiplier="1:1" id="c3X-yK-XSM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vT2-ln-fYL">
+                                        <rect key="frame" x="0.0" y="479" width="359" height="85.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-fx-peS">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(id)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssR-ND-qIy">
+                                                <rect key="frame" x="0.0" y="32.5" width="359" height="20.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(abilities)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sf-fk-Mkq">
+                                                <rect key="frame" x="0.0" y="65" width="359" height="20.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cka-BY-R4s" firstAttribute="trailing" secondItem="38a-Sw-KiG" secondAttribute="trailing" constant="8" id="3nz-3m-zox"/>
+                            <constraint firstItem="38a-Sw-KiG" firstAttribute="centerY" secondItem="bOg-wh-fXL" secondAttribute="centerY" id="L0b-ZJ-zda"/>
+                            <constraint firstItem="38a-Sw-KiG" firstAttribute="leading" secondItem="cka-BY-R4s" secondAttribute="leading" constant="8" id="f47-k1-xk3"/>
+                            <constraint firstItem="38a-Sw-KiG" firstAttribute="centerX" secondItem="bOg-wh-fXL" secondAttribute="centerX" id="nBe-lf-wMW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cka-BY-R4s"/>
+                    </view>
+                    <connections>
+                        <outlet property="abilitiesLabel" destination="3Sf-fk-Mkq" id="lEO-p6-8Nq"/>
+                        <outlet property="idLabel" destination="ssR-ND-qIy" id="Ewc-dL-bJU"/>
+                        <outlet property="nameLabel" destination="gfG-fx-peS" id="N5L-k7-QPX"/>
+                        <outlet property="searchBar" destination="Tbo-Ty-WiB" id="Njk-dK-HCV"/>
+                        <outlet property="spriteImageView" destination="h4X-Tq-CaP" id="2aF-N2-pXK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dDu-dy-abE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="148"/>
+        </scene>
+    </scenes>
+</document>
